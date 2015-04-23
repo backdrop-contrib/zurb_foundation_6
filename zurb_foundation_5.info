@@ -7,10 +7,32 @@ type = theme
 stylesheets[all][] = css/style.css
 ; stylesheets[print][] = css/print.css
 
-scripts[] = js/scripts.js
-breakpoints[all] = (min-width: 0em)
-breakpoints[small] = (min-width: 35em)
-breakpoints[large] = (min-width: 55em)
+scripts[] = js/modernizr.js
+scripts[] = js/fastclick.js
+scripts[] = js/jquery.placeholder.js
+scripts[] = js/jquery.cookie.js
+
+scripts[] = js/foundation/foundation.js
+
+scripts[] = js/foundation/foundation.abide.js
+scripts[] = js/foundation/foundation.accordion.js
+scripts[] = js/foundation/foundation.alert.js
+scripts[] = js/foundation/foundation.clearing.js
+
+scripts[] = js/foundation/foundation.dropdown.js
+scripts[] = js/foundation/foundation.equalizer.js
+scripts[] = js/foundation/foundation.interchange.js
+scripts[] = js/foundation/foundation.joyride.js
+
+scripts[] = js/foundation/foundation.magellan.js
+scripts[] = js/foundation/foundation.offcanvas.js
+scripts[] = js/foundation/foundation.orbit.js
+scripts[] = js/foundation/foundation.topbar.js
+
+scripts[] = js/foundation/foundation.reveal.js
+scripts[] = js/foundation/foundation.slider.js
+scripts[] = js/foundation/foundation.tab.js
+scripts[] = js/foundation/foundation.tooltip.js
 
 ; We need at least one setting for the theme settings page to appear in the
 ; menu. Color module provides our defaults, so we just register a dummy setting.
