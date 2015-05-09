@@ -53,6 +53,10 @@ If it bothers you that we don't use the Libraries module, file an issue and we c
 
 When official information on using third-party frameworks becomes known, this will follow it.
 
+This theme has a lot of functionality and widget type add-ons bundled in that are not actively integrated yet.
+You can look through the folders and manually integrate what you need, or delete what you don't.
+In time, we will get around to integrating this as well.  Thank you for your patience.
+
 SPECIAL THANKS
 --------------
 
