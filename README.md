@@ -21,6 +21,7 @@ CONTENTS OF THIS FILE
 
 INTRODUCTION
 ------------
+
 Foundation
 
 "The most advanced responsive front-end framework in the world."
@@ -28,13 +29,23 @@ This theme uses the Foundation 5 CSS/Javascript framework from Zurb for a base t
 
 - default Backdrop layouts
 - Foundation style page elements
+
 - a single CSS file for casual web developers OR
-- SASS stylesheets using libSASS and Grunt for advanced workflow
-- (disabled by default) Foundation grids and Neat grids
+- SASS stylesheets using libSASS and Grunt for workflow
+
+- settings page for serve local style/script files OR
+- serve style/script files from Cloudflare CDN
+
+- settings page to manually select which Javascript files/components you want to use OR
+- you can dig into the code to use .info files and SASS imports instead
+
 - (disabled by default) Bourbon SASS mixins
 - (disabled by default) the Color module UI for changing theme colors
 
-Foundation is made by ZURB, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.  For more information or support, please visit <http://foundation.zurb.com/>
+- through SASS and grunt watch, this theme enables LiveReload which automatically refreshes the page you are working on whenever you
+make a CSS, SASS or Javascript alteration and save.  It is basically the same speed of development as directly typing CSS declarations into the browser using something like Firebug or Devtools.
+
+"Foundation is made by ZURB, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.  For more information or support, please visit <http://foundation.zurb.com/>"
 
 TESTED
 -----
@@ -49,13 +60,11 @@ NOTE -- this theme is in a heavy development state.  If you have spare time and 
 
 This theme works as is by just installing it.
 
-If it bothers you that we don't use the Libraries module, file an issue and we can try to change it.
-
-When official information on using third-party frameworks becomes known, this will follow it.
-
 This theme has a lot of functionality and widget type add-ons bundled in that are not actively integrated yet.
 You can look through the folders and manually integrate what you need, or delete what you don't.
 In time, we will get around to integrating this as well.  Thank you for your patience.
+
+The next item on the agenda for this theme is to integrate Grunt Uncss cleanly into the build process, and decide if theme components like modals should use template.php + theme settings or if they should each be add-on modules.
 
 SPECIAL THANKS
 --------------
@@ -145,16 +154,9 @@ _navigation.scss
 -- the header, footer, and menus
 
 
-
-_settings.scss
-
 style.scss
 
 -- style.scss contains the settings for your SASS theme and should not contain SASS/CSS
-
-foundation.scss
-
--- foundation.scss contains full framework of Zurb Foundation -- otherwise, the pieces are described below
 
 FOUNDATION folder
 

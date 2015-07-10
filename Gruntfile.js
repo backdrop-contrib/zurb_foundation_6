@@ -24,7 +24,7 @@ module.exports = function (grunt) {
           livereload:true
         },
         files:[
-          './css/**/*.css',
+          './js/**/*.js', './css/*.css', './sass/**/*.scss'
         ]
       }
     },
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         files: {
           './css/style.css': './sass/style.scss',
 //          './css/print.css': './sass/print.scss',
-//          './css/wysiwyg.css': './sass/wysiwyg.scss'
+//        './css/wysiwyg.css': './sass/wysiwyg.scss'
         }
       },
       dev: {
@@ -69,7 +69,7 @@ module.exports = function (grunt) {
         files: {
           './css/style.css': './sass/style.scss',
 //          './css/print.css': './sass/print.scss',
-//          './css/wysiwyg.css': './sass/wysiwyg.scss'
+//        './css/wysiwyg.css': './sass/wysiwyg.scss'
         }
       }
     }

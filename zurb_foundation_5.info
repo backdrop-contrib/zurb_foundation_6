@@ -4,37 +4,37 @@ version = BACKDROP_VERSION
 backdrop = 1.x
 type = theme
 
-stylesheets[all][] = css/style.css
+; stylesheets[all][] = css/style.css
 ; stylesheets[print][] = css/print.css
 
-scripts[] = js/modernizr.js
-scripts[] = js/fastclick.js
-scripts[] = js/jquery.placeholder.js
-scripts[] = js/jquery.cookie.js
+; scripts[] = js/modernizr.js
+; scripts[] = js/fastclick.js
+; scripts[] = js/jquery.placeholder.js
+; scripts[] = js/jquery.cookie.js
 
-scripts[] = js/foundation/foundation.js
+; scripts[] = js/foundation.js
 
-scripts[] = js/foundation/foundation.abide.js
-scripts[] = js/foundation/foundation.accordion.js
-scripts[] = js/foundation/foundation.alert.js
-scripts[] = js/foundation/foundation.clearing.js
+; scripts[] = js/foundation.abide.js
+; scripts[] = js/foundation.accordion.js
+; scripts[] = js/foundation.alert.js
+; scripts[] = js/foundation.clearing.js
 
-scripts[] = js/foundation/foundation.dropdown.js
-scripts[] = js/foundation/foundation.equalizer.js
-scripts[] = js/foundation/foundation.interchange.js
-scripts[] = js/foundation/foundation.joyride.js
+; scripts[] = js/foundation.dropdown.js
+; scripts[] = js/foundation.equalizer.js
+; scripts[] = js/foundation.interchange.js
+; scripts[] = js/foundation.joyride.js
 
-scripts[] = js/foundation/foundation.magellan.js
-scripts[] = js/foundation/foundation.offcanvas.js
-scripts[] = js/foundation/foundation.orbit.js
-scripts[] = js/foundation/foundation.topbar.js
+; scripts[] = js/foundation.magellan.js
+; scripts[] = js/foundation.offcanvas.js
+; scripts[] = js/foundation.orbit.js
+; scripts[] = js/foundation.topbar.js
 
-scripts[] = js/foundation/foundation.reveal.js
-scripts[] = js/foundation/foundation.slider.js
-scripts[] = js/foundation/foundation.tab.js
-scripts[] = js/foundation/foundation.tooltip.js
+; scripts[] = js/foundation.reveal.js
+; scripts[] = js/foundation.slider.js
+; scripts[] = js/foundation.tab.js
+; scripts[] = js/foundation.tooltip.js
 
-scripts[] = js/scripts.js
+; scripts[] = js/scripts.js
 ; We need at least one setting for the theme settings page to appear in the
 ; menu. Color module provides our defaults, so we just register a dummy setting.
 settings[color] = true
