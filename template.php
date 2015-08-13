@@ -117,11 +117,10 @@ function zurb_foundation_5_breadcrumb($variables) {
 
 if (theme_get_setting('zurb_foundation_5_cdn') > 0)
 {
-backdrop_add_css('https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css', array('every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css', array('type' => 'external', 'every_page' => TRUE, 'preprocess' => TRUE));
 backdrop_add_css('themes/zurb_foundation_5/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 backdrop_add_js("themes/zurb_foundation_5/js/foundation.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("themes/zurb_foundation_5/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 
 if (theme_get_setting('zurb_foundation_5_script1') > 0)
 {
@@ -230,8 +229,6 @@ else
 backdrop_add_css("themes/zurb_foundation_5/css/style.css", array('every_page' => TRUE, 'preprocess' => TRUE));
 backdrop_add_js("themes/zurb_foundation_5/js/foundation.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 backdrop_add_js("themes/zurb_foundation_5/js/foundation.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("themes/zurb_foundation_5/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-
 
 if (theme_get_setting('zurb_foundation_5_script1') > 0)
 {
@@ -339,7 +336,7 @@ backdrop_add_js("themes/zurb_foundation_5/js/foundation.topbar.js", array('type'
 }
 
 
-
+backdrop_add_js("themes/zurb_foundation_5/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 
 }

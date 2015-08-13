@@ -1,28 +1,5 @@
 ZURB FOUNDATION 5
-===========
-
-CONTENTS OF THIS FILE
----------------------
-
- - Introduction
- - Tested
- - Known Issues
- - Special Thanks
- - Requirements
- - Installation
- - Coming From Drupal?
- - Casual Usage
- - Advanced Usage
- - File Structure
- - SASS
- - Questions
- - License
- - Maintainers
-
-INTRODUCTION
 ------------
-
-Foundation
 
 "The most advanced responsive front-end framework in the world."
 This theme uses the Foundation 5 CSS/Javascript framework from Zurb for a base theme.
@@ -47,11 +24,30 @@ make a CSS, SASS or Javascript alteration and save.  It is basically the same sp
 
 "Foundation is made by ZURB, a product design company in Campbell, California. We've put more than 15 years of experience building web products, services and websites into this framework.  For more information or support, please visit <http://foundation.zurb.com/>"
 
+CONTENTS OF THIS FILE
+---------------------
+
+ - Introduction
+ - Tested
+ - Known Issues
+ - Special Thanks
+ - Requirements
+ - Installation
+ - Coming From Drupal?
+ - Casual Usage
+ - Advanced Usage
+ - File Structure
+ - SASS
+ - Questions
+ - License
+ - Maintainers
+
+
 TESTED
 -----
 
 @todo
-This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop.
+This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop with the Mobile Navigation, Webform and Responsive Menus modules.
 
 KNOWN ISSUES
 ---------------------
@@ -126,51 +122,10 @@ Overall file structure
 - Gruntfile.js and package.json contain settings if you are using SASS Grunt
 
 SASS file structure
-
-Here is the default layout of SASS partial files in this theme.
-
-BASE folder
-_normalize.scss
--- this file contains the base CSS for your site.  You probably shouldn't alter this file.
-
-_extendables.scss
-_functions.scss
-_mixins.scss
--- these files contain the functions to transform your SASS.
-
-_variables.scss
--- this file contains the variables to place into your theme.  For example, define $link-color here as #0000ff rather than write #0000ff in your files.
-_typography.scss
--- this file contains the SASS that defines your base fonts, text elements, and so forth.
-
-DESIGN folder
-_design.scss
--- form elements, buttons, etc
-
-_layout.scss
--- tables, blocks, layout design, etc
-
-_navigation.scss
--- the header, footer, and menus
-
-
-style.scss
-
--- style.scss contains the settings for your SASS theme and should not contain SASS/CSS
-
-FOUNDATION folder
-
-_functions.scss
-
-- this contains the Zurb Foundation functions and mixins you probably should not alter
-
-_settings.scss
-
-- this contains the Zurb Foundation settings you may alter
-
-COMPONENTS folder
-- this contains the Zurb Foundation base code broken up into the various pieces you probably should not alter
-
+-------------------
+We are in the process of converting from random code from different places into follwowing:
+http://www.sitepoint.com/architecture-sass-project/
+http://sass-guidelin.es/
 
 USAGE
 -----
@@ -202,7 +157,7 @@ to install the SASS tools for this theme.
 After this has installed, use these commands on the command line in the root of your theme to make the theme do its thing:
 
 Grunt tasks
-===========
+-----------
 - grunt sass
 
 compile the sass files
@@ -216,7 +171,7 @@ start a watch and livereload session for the xtheme
 compile the theme for production
 
 Compass compile
-===========
+---------------
 
 You can also compile this theme with compass or ruby just install the following gems
 

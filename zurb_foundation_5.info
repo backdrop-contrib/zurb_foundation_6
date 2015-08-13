@@ -1,8 +1,8 @@
 name = zurb_foundation_5
 description = A starter theme for Backdrop CMS based on Zurb Foundation 5
-version = BACKDROP_VERSION
 backdrop = 1.x
 type = theme
+version = 1.x-1.0.0
 
 ; stylesheets[all][] = css/style.css
 ; stylesheets[print][] = css/print.css

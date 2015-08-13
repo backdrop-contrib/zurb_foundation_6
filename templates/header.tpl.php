@@ -25,6 +25,8 @@
   </a>
 <?php endif; ?>
 
+<?php print "<p class='name-and-slogan'>" . $site_name . " - " . $site_slogan . "</p>"; ?>
+
 <?php if ($menu): ?>
   <nav class="header-menu">
     <?php print $menu; ?>

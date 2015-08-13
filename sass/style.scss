@@ -1,25 +1,23 @@
 @charset "UTF-8";
-
 /**
  * Style file
  *
  * This file is compiled into style.css
+
+@import "bourbon";
+@import "neat";
  */
 
-// @import "bourbon";
-// Neat is a grid system.  Uncomment the line below to use the grid system.
-// @import "neat";
-
+/* ---------- Import Zurb base ---------- */
 @import "foundation/settings";
-@import "base/variables";
-@import "base/extendables";
-@import "base/functions";
-@import "base/mixins";
-// @import "base/normalize";
-@import "base/typography";
-@import "design/layout";
-@import "design/navigation";
-@import "design/design";
+@import "foundation/functions";
+/* ---------- Import base ---------- */
+@import 'helpers/variables';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/extendables';
+// @import 'base/normalize';
+@import 'base/typography';
 
 // Foundation by ZURB
 // foundation.zurb.com
@@ -28,7 +26,6 @@
 // @import "foundation";
 
 // Or selectively include components
-// Behold, here are all the Foundation components.
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
 @import 'foundation/components/block-grid';
@@ -40,7 +37,8 @@
 @import 'foundation/components/dropdown-buttons';
 @import 'foundation/components/flex-video';
 @import 'foundation/components/forms';
-// @import 'foundation/components/grid';
+@import 'foundation/components/grid';
+@import 'foundation/components/global';
 @import 'foundation/components/icon-bar';
 @import 'foundation/components/inline-lists';
 @import 'foundation/components/joyride';
@@ -61,8 +59,15 @@
 @import 'foundation/components/tables';
 @import 'foundation/components/tabs';
 @import 'foundation/components/thumbs';
+@import 'foundation/components/toolbar';
 @import 'foundation/components/tooltips';
 @import 'foundation/components/top-bar';
 @import 'foundation/components/type';
 @import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
+
+/* ---------- Import custom styles ---------- */
+@import 'design/layout';
+@import 'design/components';
+@import 'design/navigation';
+@import 'design/colors';
