@@ -6793,7 +6793,7 @@ header.l-header {
   display: none; }
 
 .admin-bar .l-header {
-  margin-top: 42px; }
+  margin-top: 32px; }
 
 .responsive-menus.responsified .responsive-menus-simple li a {
   line-height: 1 !important; }
@@ -6809,6 +6809,15 @@ header.l-header {
 
 .gn-menu-main {
   width: 60px !important; }
+
+html.admin-bar body.logged-in {
+  border-top: 0px solid #2D2D2D !important; }
+
+#admin-bar ul, #admin-bar ol, #admin-bar li {
+  font-size: inherit; }
+
+.admin-bar-search .form-search {
+  height: inherit; }
 
 @media only screen and (min-width: 769px) {
   .block-system-main-menu ul.menu li {
