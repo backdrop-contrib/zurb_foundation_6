@@ -1,0 +1,60 @@
+name = ZURB Foundation 6
+description = A starter theme for Backdrop CMS based on Zurb Foundation 6
+backdrop = 1.x
+type = theme
+version = 1.x-1.1
+
+; stylesheets[all][] = css/style.css
+; stylesheets[print][] = css/print.css
+
+; scripts[] = js/modernizr.js
+; scripts[] = js/fastclick.js
+; scripts[] = js/jquery.placeholder.js
+; scripts[] = js/jquery.cookie.js
+
+; this min file contains all the files below in one file if you want just that
+; scripts[] = js/foundation.min.js
+
+; scripts[] = js/foundation.core.js
+; scripts[] = js/foundation.js
+
+; or just add the two above and some of these ala cart
+
+; utility scripts for the below scripts
+; scripts[] = js/foundation.util.box.js
+; scripts[] = js/foundation.util.keyboard.js
+; scripts[] = js/foundation.util.mediaQuery.js
+; scripts[] = js/foundation.util.motion.js
+; scripts[] = js/foundation.util.nest.js
+; scripts[] = js/foundation.util.timerAndImageLoader.js
+; scripts[] = js/foundation.util.touch.js
+; scripts[] = js/foundation.util.triggers.js
+
+; scripts[] = js/foundation.abide.js
+; scripts[] = js/foundation.accordion.js
+; scripts[] = js/foundation.accordionMenu.js
+; scripts[] = js/foundation.alert.js
+; scripts[] = js/foundation.clearing.js
+; scripts[] = js/foundation.drilldown.js
+; scripts[] = js/foundation.dropdownMenu.js
+; scripts[] = js/foundation.equalizer.js
+; scripts[] = js/foundation.interchange.js
+; scripts[] = js/foundation.joyride.js
+; scripts[] = js/foundation.magellan.js
+; scripts[] = js/foundation.offcanvas.js
+; scripts[] = js/foundation.orbit.js
+; scripts[] = js/foundation.responsiveMenu.js
+; scripts[] = js/foundation.responsiveToggle.js
+; scripts[] = js/foundation.reveal.js
+; scripts[] = js/foundation.sticky.js
+; scripts[] = js/foundation.slider.js
+; scripts[] = js/foundation.tab.js
+; scripts[] = js/foundation.tabs.js
+; scripts[] = js/foundation.toggler.js
+; scripts[] = js/foundation.tooltip.js
+; scripts[] = js/foundation.topbar.js
+
+; scripts[] = js/scripts.js
+; We need at least one setting for the theme settings page to appear in the
+; menu. Color module provides our defaults, so we just register a dummy setting.
+settings[color] = true

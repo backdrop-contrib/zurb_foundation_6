@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-require 'bourbon'
+# require 'bourbon'
 # require 'neat'
 
 
@@ -8,7 +8,7 @@ sass_options = (environment == :development) ? { :debug_info => true } : {}
 # Don't default to DEV settings. Instead, use "compass compile -e development" (defaults to production output)
 
 # Set this to the root of your project when deployed:
-http_path = "/themes/zurb_foundation_5/"
+http_path = "/themes/zurb_foundation_6/"
 css_dir = "css"
 sass_dir = "sass"
 images_dir = "images"

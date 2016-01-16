@@ -2,27 +2,43 @@
  * Colours
  *
  * Colours go in this file
- * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
 */
-@charset "UTF-8";
+@charset "UTF-8" ;
 
-header.l-header {
-    background-color: $oil;
+body {
+  color: $black;
 }
 
-.name-and-slogan {
-    color: $ghost;
+h1,
+h2,
+h3 {
+  color: $black;
 }
 
-.dl-menuwrapper button:hover, .dl-menuwrapper button.dl-active, .dl-menuwrapper ul {
-    background: $primary-color !important;
+a,
+.tabs.primary > li > a {
+  color: $primary-color;
 }
 
-li a.active {
-    color: $primary-color;
+a:hover,
+a:focus {
+  color: #197eb2;
 }
 
-.l-container, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
-    background: inherit;
+.tabs.primary > li > a:focus,
+.tabs.primary > li > a:hover {
+  color: $black;
+}
+
+.l-header .block-system-main-menu a:hover,
+.l-header .block-system-main-menu a:focus,
+.l-header .block-system-main-menu a:active,
+.l-header .block-system-main-menu a.active {
+  background: #3E494D;
+  color: $white;
+}
+
+.tabs,
+.tabs-content {
+  border-top: 0px;
 }

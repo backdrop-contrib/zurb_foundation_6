@@ -1,18 +1,45 @@
 /*
  * Typography
- * 
+ *
  * Text styles go in this file
  * these defaults come from the Bartik theme
  */
 
 // 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
-//    http://clagnut.com/blog/348/#c790
+// http://clagnut.com/blog/348/#c790
 // 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
-//    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+// www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 html {
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%;
+
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+
+  /* 2 */
   -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  margin-bottom: -0.2rem;
+  font-size: 2.25rem;
+  font-weight: 200;
+}
+
+.page-title {
+  margin-top: 0px;
 }
 
 code,
@@ -35,14 +62,17 @@ code var {
   font-size: 100%;
   background-color: transparent;
 }
+
 pre code,
 pre samp,
 pre var {
   padding: 0;
 }
+
 .description code {
   font-size: 1em;
 }
+
 kbd {
   border: 1px outset #575757;
   margin: 0 3px;
@@ -51,6 +81,7 @@ kbd {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
 pre {
   margin: 10px 0;
   overflow: hidden;
@@ -58,48 +89,63 @@ pre {
   white-space: pre-wrap;
 }
 
-
 /* ------------------ Reset Styles ------------------ */
-
 caption {
-  text-align: left; /* LTR */
+  text-align: left;
+
+  /* LTR */
   font-weight: normal;
 }
+
 [dir="rtl"] caption {
   text-align: right;
 }
+
 blockquote {
-  border-left: 4px solid #bbb; /* RTL */
+  border-left: 4px solid #bbb;
+
+  /* RTL */
   font-style: italic;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
 }
+
 [dir="rtl"] blockquote {
   border-left: none;
   border-right: 4px solid #bbb;
 }
+
 blockquote:before {
-  content: "\201C"; /* RTL */
+  content: "\201C";
+
+  /* RTL */
   font-size: 3em;
   line-height: 0.1em;
   margin-right: 0.2em;
   vertical-align: -.4em;
 }
+
 [dir="rtl"] blockquote:before {
   content: "\201D";
 }
+
 blockquote:after {
-  content: "\201D"; /* RTL */
+  content: "\201D";
+
+  /* RTL */
   font-size: 3em;
   line-height: 0.1em;
   vertical-align: -.45em;
 }
+
 [dir="rtl"] blockquote:after {
   content: "\201C";
 }
+
 blockquote > p:first-child {
   display: inline;
 }
+
 a.feed-icon {
   display: inline-block;
   padding: 15px 0 0 0;
