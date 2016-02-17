@@ -1,8 +1,9 @@
 <?php
 /**
  * @file
- * Theme settings file for zurb_foundation_6.
- */
+ * Theme settings for Zurb Foundation 6 parent theme
+ *
+*/
 
 function zurb_foundation_6_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
 
@@ -10,11 +11,50 @@ if (isset($form_id)) {
    return;
   }
 
-$form['zurb_foundation_6_cdn'] = array(
+$form['disclaimer1'] = array(
+  '#markup' => '<p><strong>' . t('These settings for the parent theme do NOT extend into the subtheme.') . '</strong></p>',
+);
+
+$form['zurb_foundation_6_cdn_css'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('<b>Use jsdelivr CDN</b> instead of this website to serve the base Foundation6 CSS files.  If you are using SASS, you will have to manually adjust your imports to avoid loading the same styles twice.'),
-    '#default_value' => theme_get_setting('zurb_foundation_6_cdn', 'zurb_foundation_6'),
+    '#title'         => t('<b>Use Cloudflare CDN</b> to serve the Zurb Foundation 6 CSS with standard grid as one minified CSS file.  <br>Uncheck</b> to serve the CSS from your web server.'),
+    '#default_value' => theme_get_setting('zurb_foundation_6_cdn_css', 'zurb_foundation_6'),
   );
+
+$form['zurb_foundation_6_cdn_flex_css'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('<b>Use Cloudflare CDN</b> to serve the Zurb Foundation 6 CSS with flexbox grid as one minified CSS file.  <br>Uncheck</b> to serve the CSS from your web server.'),
+    '#default_value' => theme_get_setting('zurb_foundation_6_cdn_flex_css', 'zurb_foundation_6'),
+  );
+
+$form['zurb_foundation_6_js_cdn_all'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Novice mode: <b>Use Cloudflare CDN</b> instead of this website to serve the whole Zurb Foundation 6 JS library as one minified Javascript file. <br>Uncheck</b> for the option to serve the JS files piece by piece.'),
+    '#default_value' => theme_get_setting('zurb_foundation_6_js_cdn_all', 'zurb_foundation_6'),
+  );
+
+$form['zurb_foundation_6_js_local_all'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Novice mode: serve the whole Zurb Foundation 6 JS library as one minified Javascript file from this server. <br>Uncheck</b> for the option to serve the JS files piece by piece.'),
+    '#default_value' => theme_get_setting('zurb_foundation_6_js_local_all', 'zurb_foundation_6'),
+  );
+
+$form['disclaimer2'] = array(
+  '#markup' => '<p>' . t('You may choose to include these Javascript files into your page to help enable these certain components.  WARNING: some of the components may rely on multiple scripts, and you are responsible for adding the theme template functions to utilize these functionalities.  If you do not need these functionalities for this website, you may leave each unchecked.') . '</p>',
+);
+
+$form['zurb_foundation_6_js_cdn_each'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Advanced mode: <b>Use Cloudflare CDN</b> instead of this website to serve the Zurb Foundation 6 JS components piece by piece. <br>Uncheck</b> to not serve these files.'),
+    '#default_value' => theme_get_setting('zurb_foundation_6_js_cdn_each', 'zurb_foundation_6'),
+);
+
+$form['zurb_foundation_6_js_local_each'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Advanced mode: <b>Use your server</b> instead of a CDN to serve the Zurb Foundation 6 JS components piece by piece. <br>Uncheck</b> to not serve these files.'),
+    '#default_value' => theme_get_setting('zurb_foundation_6_js_local_each', 'zurb_foundation_6'),
+);
+
 
 $form['disclaimer3'] = array(
   '#markup' => '<p>' . t('Third party helper utilities') . '</p>',
@@ -42,20 +82,6 @@ $form['zurb_foundation_6_script4'] = array(
       '#type' => 'checkbox',
       '#title' => t('Load script placeholder.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script4', 'zurb_foundation_6'),
-    );
-
-$form['disclaimer1'] = array(
-  '#markup' => '<p>' . t('You may choose to include these Javascript files into your page to help enable these certain components.  WARNING: some of the components may rely on multiple scripts, and you are responsible for adding the theme template functions to utilize these functionalities.  If you do not need these functionalities for this website, you may leave each unchecked.') . '</p>',
-);
-
-$form['disclaimer2'] = array(
-  '#markup' => '<p>' . t('Or, if you check the box below, you can load all the scripts in a minified file.  Leave unchecked to load which components you actually need.') . '</p>',
-);
-
-$form['zurb_foundation_6_script0'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Load all components in a single file'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_script0', 'zurb_foundation_6'),
     );
 
 $form['disclaimer4'] = array(
@@ -132,100 +158,100 @@ $form['zurb_foundation_6_script15'] = array(
       '#default_value' => theme_get_setting('zurb_foundation_6_script15', 'zurb_foundation_6'),
     );
 
-$form['zurb_foundation_6_script18'] = array(
+$form['zurb_foundation_6_script16'] = array(
       '#type' => 'checkbox',
       '#title' => t('Load script drilldown.js'),
+      '#default_value' => theme_get_setting('zurb_foundation_6_script16', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_script17'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Load script dropdown.js'),
+      '#default_value' => theme_get_setting('zurb_foundation_6_script17', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_script18'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Load script dropdownMenu.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script18', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script19'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script dropdown.js'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_script19', 'zurb_foundation_6'),
+      '#title' => t('Load script equalizer.js'),
+      '#default_value' => theme_get_setting('zurb_foundation_6_script3', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script20'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script dropdownMenu.js'),
+      '#title' => t('Load script interchange.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script20', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script21'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script equalizer.js'),
+      '#title' => t('Load script magellan.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script21', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script22'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script interchange.js'),
+      '#title' => t('Load script offcanvas.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script22', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_script23'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Load script orbit.js'),
+      '#default_value' => theme_get_setting('zurb_foundation_6_script23', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script24'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script magellan.js'),
+      '#title' => t('Load script responsiveMenu.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script24', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script25'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script offcanvas.js'),
+      '#title' => t('Load script responsiveToggle.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script25', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script26'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script orbit.js'),
+      '#title' => t('Load script reveal.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script26', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script27'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script responsiveMenu.js'),
+      '#title' => t('Load script slider.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script27', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script28'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script responsiveToggle.js'),
+      '#title' => t('Load script sticky.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script28', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script29'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script reveal.js'),
+      '#title' => t('Load script tabs.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script29', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script30'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script slider.js'),
+      '#title' => t('Load script toggler.js'),
       '#default_value' => theme_get_setting('zurb_foundation_6_script30', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_script31'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Load script sticky.js'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_script31', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_script32'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Load script tabs.js'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_script32', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_script33'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Load script toggler.js'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_script33', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_script34'] = array(
-      '#type' => 'checkbox',
       '#title' => t('Load script tooltip.js'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_script34', 'zurb_foundation_6'),
+      '#default_value' => theme_get_setting('zurb_foundation_6_script31', 'zurb_foundation_6'),
     );
 
 $form['zurb_foundation_6_juiced_main_background'] = array(
@@ -275,5 +301,9 @@ $form['zurb_foundation_6_footer_main_background_blurred'] = array(
       '#title' => t('Blur this background'),
       '#default_value' => theme_get_setting('zurb_foundation_6_footer_main_background_blurred', 'zurb_foundation_6'),
     );
+
+$form['recommended'] = array(
+  '#markup' => '<p>' . t('Looking for additional theme features?  You might find what you are looking in layouts or modules.  Some common items to add to your site might be:<br><a href="https://backdropcms.org/modules">Modules</a><br><a href="https://backdropcms.org/layouts">Layouts</a><br>Menus<br><a href="https://backdropcms.org/project/mobile_navigation">Mobile Navigation</a><br><a href="https://backdropcms.org/project/responsive_menus">Responsive Menus</a><br><a href="https://backdropcms.org/project/wpmenu">WPMenu</a><br>Widgets<br><a href="https://backdropcms.org/project/google_fonts">Google Fonts</a><br><a href="https://backdropcms.org/project/back_to_top">Back To Top</a><br><a href="https://backdropcms.org/project/fanciblock">FanciBlock</a><br><a href="https://backdropcms.org/project/flexslider">FlexSlider</a><br>Parallax<br><a href="https://backdropcms.org/project/parallax_bg">Parallax_BG</a><br><a href="https://backdropcms.org/project/scrollreveal">Scroll Reveal</a><br><a href="https://backdropcms.org/project/void_menu">Void Menu</a> ') . '</p>',
+);
 
 }

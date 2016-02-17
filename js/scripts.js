@@ -1,6 +1,6 @@
 /**
  * @file
- * JS for Zurb Foundation 5.
+ * JS for Zurb Foundation 6.
  */
 (function($, Backdrop, window, document, undefined) {
 
@@ -16,8 +16,6 @@
   $(document).ready(function() {
 
     // run Javascript on page load here
-    console.log("Welcome to the console");
-    $(document).foundation();
 
   });
 })(jQuery, Backdrop, this, this.document);

@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/**
+ * Style file
+ *
+ * This file is compiled into css/your-custom.css
+ * Uncomment the lines of the features you would like to use.
+ * Comment the lines of the features you don't need on this website
+ */
+
+@import "../node_modules/susy/sass/susy";
+@import "bourbon";
+@import "neat";
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 4,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+/* ---------- Import Zurb base ----------  */
+// Or selectively include components
+// Sass utilities
+@import 'core/foundation/util/util';
+
+// settings
+@import 'core/foundation/settings/settings';
+
+// typography
+@import 'core/foundation/typography/typography';
+
+// forms
+@import 'core/foundation/forms/forms';
+
+// Global variables and styles
+@import 'core/foundation/global';
+
+// grid
+@import 'core/foundation/grid/grid';
+//or flex-grid
+@import 'core/foundation/grid/flex-grid';
+
+// components
+@import 'core/foundation/components/visibility';
+@import 'core/foundation/components/float';
+@import 'core/foundation/components/button';
+@import 'core/foundation/components/button-group';
+@import 'core/foundation/components/accordion-menu';
+@import 'core/foundation/components/accordion';
+@import 'core/foundation/components/badge';
+@import 'core/foundation/components/breadcrumbs';
+@import 'core/foundation/components/callout';
+@import 'core/foundation/components/close-button';
+@import 'core/foundation/components/drilldown';
+@import 'core/foundation/components/dropdown-menu';
+@import 'core/foundation/components/dropdown';
+@import 'core/foundation/components/flex-video';
+@import 'core/foundation/components/label';
+@import 'core/foundation/components/media-object';
+@import 'core/foundation/components/menu';
+@import 'core/foundation/components/off-canvas';
+@import 'core/foundation/components/orbit';
+@import 'core/foundation/components/pagination';
+@import 'core/foundation/components/progress-bar';
+@import 'core/foundation/components/reveal';
+@import 'core/foundation/components/slider';
+@import 'core/foundation/components/sticky';
+@import 'core/foundation/components/switch';
+@import 'core/foundation/components/table';
+@import 'core/foundation/components/tabs';
+@import 'core/foundation/components/title-bar';
+@import 'core/foundation/components/top-bar';
+@import 'core/foundation/components/thumbnail';
+@import 'core/foundation/components/tooltip';
+
+@mixin foundation-everything {
+  @include foundation-global-styles;
+  @include foundation-grid;
+  @include foundation-typography;
+  @include foundation-button;
+  @include foundation-forms;
+  @include foundation-visibility-classes;
+  @include foundation-float-classes;
+  @include foundation-accordion;
+  @include foundation-accordion-menu;
+  @include foundation-badge;
+  @include foundation-breadcrumbs;
+  @include foundation-button-group;
+  @include foundation-callout;
+  @include foundation-close-button;
+  @include foundation-drilldown-menu;
+  @include foundation-dropdown;
+  @include foundation-dropdown-menu;
+  @include foundation-flex-video;
+  @include foundation-label;
+  @include foundation-media-object;
+  @include foundation-menu;
+  @include foundation-off-canvas;
+  @include foundation-orbit;
+  @include foundation-pagination;
+  @include foundation-progress-bar;
+  @include foundation-slider;
+  @include foundation-sticky;
+  @include foundation-reveal;
+  @include foundation-switch;
+  @include foundation-table;
+  @include foundation-tabs;
+  @include foundation-thumbnail;
+  @include foundation-title-bar;
+  @include foundation-tooltip;
+  @include foundation-top-bar;
+}
+
+/* ---------- Import parent theme base ---------- */
+@import 'core/helpers/variables';
+@import 'your-custom/helpers/variables';
+
+@import 'core/helpers/functions';
+@import 'your-custom/helpers/functions';
+
+@import 'core/helpers/mixins';
+@import 'your-custom/helpers/mixins';
+
+@import 'core/helpers/extendables';
+@import 'your-custom/helpers/extendables';
+
+@import 'core/design/typography';
+@import 'your-custom/design/typography';
+
+@import 'core/design/layout';
+@import 'your-custom/design/layout';
+
+@import 'core/design/components';
+@import 'your-custom/design/components';
+
+@import 'core/design/navigation';
+@import 'your-custom/design/navigation';
+
+@import 'core/design/colors';
+@import 'your-custom/design/colors';

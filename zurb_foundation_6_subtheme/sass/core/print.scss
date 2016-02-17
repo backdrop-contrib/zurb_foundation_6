@@ -4,11 +4,12 @@
  * Style file
  *
  * This file is compiled into style.css
-todo  
+ */
 @import "bourbon";
 @import "neat";
 @import 'base/variables';
 
+/* ---------- Import base ---------- */
 @import 'base/normalize';
 @import 'base/functions';
 @import 'base/mixins';
@@ -19,4 +20,3 @@ todo
 .sidebar{
   display: none;
 }
-*/
