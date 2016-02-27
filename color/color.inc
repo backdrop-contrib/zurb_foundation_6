@@ -1,7 +1,7 @@
 <?php
 
 // Put the logo path into JavaScript for the live preview.
-backdrop_add_js(array('color' => array('logo' => theme_get_setting('logo', 'pure_css'))), 'setting');
+backdrop_add_js(array('color' => array('logo' => theme_get_setting('logo', 'zurb_foundation_6'))), 'setting');
 
 $info = array(
   // Available colors and color labels used in theme.
