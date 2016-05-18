@@ -1,10 +1,6 @@
 /**
- * Layout
- *
  * All layout theming should go in this file
  * general html page elements and non-forms/buttons/footer/header
- * these defaults come from the Bartik theme
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
 @charset "UTF-8" ;
 
@@ -124,73 +120,15 @@ ul.tips {
 
 /* ------------------ Layout ------------------ */
 
-/* All layouts */
-.l-top,
-.l-container,
-.l-content,
-.l-messages,
-.l-featured,
-.l-triptych {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.l-top {
-  padding-left: 35px;
-}
-
-.l-triptych-wrapper {
-  border-top: 1px solid #e7e7e7;
-}
-
-/* Push the footer down to the bottom of the page. */
-.layout {
-  box-sizing: border-box;
-  height: 100vh;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 body.admin-bar .layout {
   padding-top: 30px;
   margin-top: -30px;
 }
 
-.l-container,
-.l-triptych {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.l-header,
-.l-top,
-.l-messages,
-.l-footer-wrapper,
-.l-footer {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-/* ------------------- Main ------------------- */
-.l-container {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
 /* ----------------- Top ----------------- */
 .l-top {
-  margin-top: 20px;
+  margin-top: -16px;
+  clear: both;
 }
 
 /* ----------------- Content ------------------ */
@@ -198,9 +136,9 @@ body.admin-bar .layout {
   margin-top: 10px;
 }
 
-h1#page-title {
+#page-title {
   font-size: 2em;
-  line-height: 1;
+  line-height: 2;
   margin-top: .5em;
 }
 
@@ -470,6 +408,7 @@ article .link-wrapper ul.links {
 /* ------------------ Sidebar ----------------- */
 .l-sidebar .block {
   padding: 15px 20px;
+  padding-top: 0px;
   margin: 0 0 20px;
 }
 
@@ -491,52 +430,11 @@ article .link-wrapper ul.links {
   border: none;
 }
 
-/* ----------------- Triptych ----------------- */
-.l-triptych h2 {
-  font-size: 1.714em;
-  margin-bottom: 0.8em;
-  text-shadow: 0 1px 0 #fff;
-  text-align: center;
-  line-height: 1;
-}
-
-.l-triptych .block {
-  margin-bottom: 2em;
-  padding-bottom: 2em;
-  border-bottom: 1px solid #dfdfdf;
-  line-height: 1.3;
-}
-
-.l-triptych .block.last {
-  border-bottom: none;
-}
-
-.l-triptych .block ul li,
-.l-triptych .block ol li {
-  list-style: none;
-}
-
-.l-triptych .block ul,
-.l-triptych .block ol {
-  padding-left: 0;
-}
-
-.l-triptych .block-user-login .form-text {
-  width: 185px;
-}
-
-.l-triptych .block-node-syndicate h2 {
-  overflow: hidden;
-  width: 0;
-  height: 0;
-}
-
-.l-triptych-last .block-node-syndicate {
-  text-align: right;
-}
-
-.l-triptych .block-search-form .form-type-search input {
-  width: 185px;
+@media (min-width: 48em) {
+.front .l-sidebar {
+    top: 1.3em;
+    margin-bottom: 1.3em;
+  }
 }
 
 .block-system-powered-by {
@@ -552,6 +450,7 @@ article .link-wrapper ul.links {
 .tabs ul.primary {
   padding: 0 3px;
   margin: 0;
+  margin-top: 20px;
   overflow: visible;
   border: none;
   background: transparent url(../images/tabs-border.png) repeat-x left bottom;

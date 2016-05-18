@@ -25,6 +25,10 @@ a:focus {
   color: #197eb2;
 }
 
+.l-wrapper {
+  background-color: $white;
+}
+
 .tabs.primary > li > a:focus,
 .tabs.primary > li > a:hover {
   color: $black;

@@ -1,7 +1,9 @@
 ZURB FOUNDATION 6
 -----------------
 
-This theme uses the Foundation 6.1.2 CSS/Javascript framework from ZURB for a base theme.
+This theme uses the Foundation 6.2 CSS/Javascript framework from ZURB for a base theme.
+
+This theme is updated for Backdrop CMS 1.4+!  It contains the page-width admin UI setting.
 
 - novices can edit just the css/your-custom.css file to alter the appearence of your website.
 
@@ -21,7 +23,7 @@ This theme uses the Foundation 6.1.2 CSS/Javascript framework from ZURB for a ba
 
 - this theme contains checkboxes to serve modernizr script for browser feature detection, jquery-validate for form validation, fastclick for mobile tapping, and hammer for touch based events.  You must provide the custom integration for each.
 
-- this theme contains easy UI background-image settings for Juiced layouts.
+- this theme contains easy UI background-image settings for supporting layouts.  Mobile (no slow downloads), regular screen, and high-resolution (larger downloads) backgrounds are supported.
 
 - You can change your website colours from this theme's settings page using the Color module.  (Though it is actually faster/more accurate just to edit the css/your-custom.css or Sass files).  To use this functionality, enable the Color module on your website. Edit your theme .info file to remove the semi-colon from the ;stylesheets[all][] = css/colors.css.  Finally, visit your theme settings page, select your colours, and hit save.  Because this is not a priority for all sites and we only have so much time, if you see an error while using this feature please raise an issue on https://github.com/backdrop-contrib or @biolithic and we will get to fixing it.
 
@@ -56,7 +58,7 @@ CONTENTS OF THIS FILE
 TESTED
 -----
 
-This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop 1.2.
+This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop 1.4.
 
 http://dev-backdropthemes.pantheon.io/ZURB-6
 
