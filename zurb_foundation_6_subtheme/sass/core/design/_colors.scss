@@ -3,7 +3,7 @@
  *
  * Colours go in this file
 */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 body {
   color: $black;
@@ -34,15 +34,31 @@ a:focus {
   color: $black;
 }
 
-.l-header .block-system-main-menu a:hover,
-.l-header .block-system-main-menu a:focus,
-.l-header .block-system-main-menu a:active,
 .l-header .block-system-main-menu a.active {
-  background: #3E494D;
+  background: #3e494d;
   color: $white;
 }
 
-.tabs,
-.tabs-content {
-  border-top: 0px;
+.l-wrapper.juiced-main,
+.l-content.juiced-main {
+  background-color: transparent;
+  z-index: 1;
+}
+
+div[class^="layout--juiced-up"] .tabs {
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 37.5625em) {
+  .l-header .block-system-main-menu ul.menu li ul li:hover {
+    background-color: $white;
+  }
+
+  .l-header .block-system-main-menu a:hover,
+  .l-header .block-system-main-menu a:focus,
+  .l-header .block-system-main-menu a:active {
+    background: rgba(250, 250, 250, 0.30);
+    transition: all .25s ease-in-out;
+    color: $black;
+  }
 }

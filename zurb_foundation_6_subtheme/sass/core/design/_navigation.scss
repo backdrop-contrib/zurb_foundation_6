@@ -1,7 +1,7 @@
 /**
  * footer/header/main menu/navigation go in this file
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 /* ------------------ Header ------------------ */
 #skip-link {
@@ -31,13 +31,13 @@
   outline: 0;
 }
 
+.logo,
 .block-system-header .logo {
   float: left;
+}
 
-  /* LTR */
+.block-system-header .logo {
   padding: 0px;
-
-  /* LTR */
 }
 
 [dir="rtl"] .block-system-header .logo {
@@ -317,7 +317,15 @@ header.l-header {
 }
 
 html.admin-bar body.logged-in {
-  border-top: 0px solid #2D2D2D !important;
+  border-top: 0px solid #2d2d2d !important;
+}
+
+html.admin-bar .layout--juiced-up-full-screen-left header.l-header {
+  top: 0px;
+}
+
+html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+  top: 0px;
 }
 
 #admin-bar ul,
@@ -450,14 +458,58 @@ html.admin-bar body.logged-in {
   border-left: none;
 }
 
-@media only screen and (min-width: 769px) {
+.layout--juiced-up-full-screen-bottom .logo img,
+.layout--juiced-up-full-screen-none .logo img,
+.layout--juiced-up-full-screen-right .logo img,
+.layout--juiced-up-split-screen-none .logo img,
+.layout--juiced-up-split-screen-none-flipped .logo img {
+  height: 50px;
+}
+
+@media screen and (max-width: 37.5625em) {
+  .l-header {
+    display: flex;
+    order: -2;
+  }
+
+  #collapsed-menu-button {
+    margin-left: 0px;
+  }
+
+  .mean-container .mean-bar {
+    float: none;
+    top: 30px;
+  }
+}
+
+@media only screen and (min-width: 37.5625em) {
+  .layout--juiced-up-full-screen-bottom .l-header,
+  .layout--juiced-up-full-screen-none .l-header,
+  .layout--juiced-up-split-screen-none .l-header,
+  .layout--juiced-up-split-screen-none-flipped .l-header {
+    margin-top: 0px;
+  }
+
+  .l-header .header-menu {
+    display: block;
+    clear: both;
+    float: left;
+    font-size: 1.1em;
+    margin-left: 0px;
+  }
+
   .block-system-main-menu ul.menu li {
     padding: 5px !important;
     padding-top: 0px !important;
+    padding-left: 0px !important;
   }
 
   body:not(.front) .block-system-main-menu {
     top: 0px !important;
+  }
+
+  .l-header .block-system-main-menu ul.menu li ul {
+    top: 2em;
   }
 
   .responsive-menus-load-processed .l-header .block-system-main-menu ul.menu li ul {

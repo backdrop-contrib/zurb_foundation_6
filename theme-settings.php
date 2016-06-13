@@ -7,16 +7,9 @@
 
 function zurb_foundation_6_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
 
-
-$layouts = layout_load_all();
-
 if (isset($form_id)) {
    return;
   }
-
-$form['disclaimer1'] = array(
-  '#markup' => '<p><strong>' . t('These settings for the parent theme do NOT extend into the subtheme.') . '</strong></p>',
-);
 
 $form['use_max_width'] = array(
     '#type'          => 'checkbox',
@@ -52,7 +45,7 @@ foreach ($default_layout_items as $default_layout_item) {
     );
 
   $form['maxwidth1']["max_width_element1"] = array(
-        '#title' => t('For this page area:'),
+        '#title' => t('For this page area.  For this to work correctly on -page content- option, you must enable it on a layout of the B4 Full Radix or Zurb 6 Toolkit contrib layouts or similar. '),
         '#type' => 'select',
         '#options' => array("full page", "page content"),
         '#default_value' => config_get('zurb_foundation_6.settings', 'max_width_element1')
@@ -88,7 +81,7 @@ foreach ($default_layout_items as $default_layout_item) {
     );
 
   $form['maxwidth2']["max_width_element2"] = array(
-        '#title' => t('For this page area:'),
+        '#title' => t('For this page area.  For this to work correctly on -page content- option, you must enable it on a layout of the B4 Full Radix or Zurb 6 Toolkit contrib layouts or similar. '),
         '#type' => 'select',
         '#options' => array("full page", "page content"),
         '#default_value' => config_get('zurb_foundation_6.settings', 'max_width_element2')
@@ -124,7 +117,7 @@ foreach ($default_layout_items as $default_layout_item) {
     );
 
   $form['maxwidth3']["max_width_element3"] = array(
-        '#title' => t('For this page area:'),
+        '#title' => t('For this page area.  For this to work correctly on -page content- option, you must enable it on a layout of the B4 Full Radix or Zurb 6 Toolkit contrib layouts or similar. '),
         '#type' => 'select',
         '#options' => array("full page", "page content"),
         '#default_value' => config_get('zurb_foundation_6.settings', 'max_width_element3')
@@ -136,6 +129,150 @@ foreach ($default_layout_items as $default_layout_item) {
         '#options' => array("800px", "960px", "Bootstrap container default", "1200px", "1440px"),
         '#default_value' => config_get('zurb_foundation_6.settings', 'max_width_number3')
     );
+
+// backgrounds
+$form['zurb_foundation_6_backgrounds'] = array(
+        '#title' => t('Set background images for site regions'),
+        '#type' => 'fieldset',
+    );
+
+// body area
+$form['zurb_foundation_6_backgrounds']["disclaimer"] = array(
+  '#markup' => '<p>' . t('An image style such as [mywebsite.com/]files/styles/[large or custom]/[path to image] or one of these services may be helpful here: imgix.com, imagefly.io, cloudinary.com, imageresizer.io or aws.amazon.com/s3.') . '</p>',
+);
+
+$form['zurb_foundation_6_backgrounds']['body_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area in a layout.'),
+      '#default_value' => theme_get_setting('body_main_background', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['body_main_background_retina'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for high resolution screens for the main page area in a layout.'),
+      '#default_value' => theme_get_setting('body_main_background_retina', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['body_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('body_main_background_blurred', 'zurb_foundation_6'),
+    );
+
+
+
+
+//l-calltoaction area
+$form['zurb_foundation_6_backgrounds']['footer_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the call to action area in a layout.'),
+      '#default_value' => theme_get_setting('footer_main_background', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['footer_main_background_retina'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for high resolution screens for the call to action area in a layout.'),
+      '#default_value' => theme_get_setting('footer_main_background_retina', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['footer_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('footer_main_background_blurred', 'zurb_foundation_6'),
+    );
+
+
+//juiced-main area
+$form['zurb_foundation_6_backgrounds']['juiced_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('juiced_main_background', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['juiced_main_background_retina'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for high resolution screens for the main page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('juiced_main_background_retina', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['juiced_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('juiced_main_background_blurred', 'zurb_foundation_6'),
+    );
+
+
+
+
+
+
+//statement 1
+$form['zurb_foundation_6_backgrounds']['statement1_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the big statement 1 area in a layout.'),
+      '#default_value' => theme_get_setting('statement1_background', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['statement1_background_retina'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 1 area in a layout.'),
+      '#default_value' => theme_get_setting('statement1_background_retina', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['statement1_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('statement1_background_blurred', 'zurb_foundation_6'),
+    );
+
+
+
+
+
+
+//statement 2
+$form['zurb_foundation_6_backgrounds']['statement2_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the big statement 2 area in a layout.'),
+      '#default_value' => theme_get_setting('statement2_background', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['statement2_background_retina'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 2 area in a layout.'),
+      '#default_value' => theme_get_setting('statement2_background_retina', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['statement2_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('statement2_background_blurred', 'zurb_foundation_6'),
+    );
+
+
+
+
+
+//statement 3
+$form['zurb_foundation_6_backgrounds']['statement3_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the big statement 3 area in a layout.'),
+      '#default_value' => theme_get_setting('statement3_background', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['statement3_background_retina'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 3 area in a layout.'),
+      '#default_value' => theme_get_setting('statement3_background_retina', 'zurb_foundation_6'),
+    );
+
+$form['zurb_foundation_6_backgrounds']['statement3_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('statement3_background_blurred', 'zurb_foundation_6'),
+    );
+
+
 
 $form['zurb_foundation_6_cdn_css'] = array(
     '#type'          => 'checkbox',
@@ -376,153 +513,8 @@ $form['zurb_foundation_6_script31'] = array(
       '#default_value' => theme_get_setting('zurb_foundation_6_script31', 'zurb_foundation_6'),
     );
 
-
-
-// backgrounds
-$form['zurb_foundation_6_backgrounds'] = array(
-        '#title' => t('Set background images for site regions'),
-        '#type' => 'fieldset',
-    );
-
-// body area
-$form['zurb_foundation_6_backgrounds']["disclaimer"] = array(
-  '#markup' => '<p>' . t('An image style such as [mywebsite.com/]files/styles/[large or custom]/[path to image] or one of these services may be helpful here: imgix.com, imagefly.io, cloudinary.com, imageresizer.io or aws.amazon.com/s3.') . '</p>',
-);
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_body_main_background'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for the main page area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_body_main_background', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_body_main_background_retina'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for high resolution screens for the main page area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_body_main_background_retina', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_body_main_background_blurred'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_body_main_background_blurred', 'zurb_foundation_6'),
-    );
-
-
-
-
-//l-calltoaction area
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_footer_main_background'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for the call to action area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_footer_main_background', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_footer_main_background_retina'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for high resolution screens for the call to action area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_footer_main_background_retina', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_footer_main_background_blurred'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_footer_main_background_blurred', 'zurb_foundation_6'),
-    );
-
-
-//juiced-main area
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_juiced_main_background'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for the main page area when you are using a Juiced layout'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_juiced_main_background', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_juiced_main_background_retina'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for high resolution screens for the main page area when you are using a Juiced layout'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_juiced_main_background_retina', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_juiced_main_background_blurred'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_juiced_main_background_blurred', 'zurb_foundation_6'),
-    );
-
-
-
-
-
-
-//statement 1
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement1_background'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for the big statement 1 area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement1_background', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement1_background_retina'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 1 area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement1_background_retina', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement1_background_blurred'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement1_background_blurred', 'zurb_foundation_6'),
-    );
-
-
-
-
-
-
-//statement 2
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement2_background'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for the big statement 2 area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement2_background', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement2_background_retina'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 2 area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement2_background_retina', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement2_background_blurred'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement2_background_blurred', 'zurb_foundation_6'),
-    );
-
-
-
-
-
-//statement 3
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement3_background'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for the big statement 3 area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement3_background', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement3_background_retina'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Enter the URL to your desired background image for high resolution screens for the big statement 3 area in a layout.'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement3_background_retina', 'zurb_foundation_6'),
-    );
-
-$form['zurb_foundation_6_backgrounds']['zurb_foundation_6_statement3_background_blurred'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Blur this background'),
-      '#default_value' => theme_get_setting('zurb_foundation_6_statement3_background_blurred', 'zurb_foundation_6'),
-    );
-
-
 $form['css_helpers'] = array(
-  '#markup' => '<p>' . t('Looking for CSS theming help?  You can use these CSS class selectors from layouts in your theme: <br /> l-header <br /> l-wrapper <br /> l-top <br /> l-content <br /> l-sidebar1 <br /> l-sidebar2 <br /> l-halfs <br /> l-half1 <br /> l-half2 <br /> l-thirds <br /> l-third1 <br /> l-third2 <br /> l-third3 <br /> l-quarters <br /> l-quarter1 <br /> l-quarter2 <br /> l-quarter3 <br /> l-quarter4 <br /> l-statement1 <br /> l-statement2 <br /> l-statement3 <br /> l-secondary1 <br /> l-secondary2 <br /> l-bottom <br /> l-calltoaction <br /> l-footer <br />') . '</p>',
+  '#markup' => '<p>' . t('Looking for CSS theming help? Looking at <a href="http://dev-backdropthemes.pantheonsite.io/docs14" target="blank">the documentation here.</a>') . '</p>',
 );
 
 $form['recommended'] = array(
